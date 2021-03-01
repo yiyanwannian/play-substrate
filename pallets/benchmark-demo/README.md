@@ -11,7 +11,7 @@ build --release --features runtime-benchmarks
 ./target/release/node-template benchmark --chain dev --execution=wasm --wasm-execution=compiled --pallet pallet_balances --extrinsic transfer --steps 50 --repeat 20 --raw > balances_transfer.txt
 
 # benchmark our demo
-./target/release/node-template benchmark --chain dev --execution=wasm --wasm-execution=compiled --pallet pallet_benchmark_demo --extrinsic do_something --steps 50 --repeat 20
+./target/release/node-template benchmark --chain dev --features runtime-benchmarks --execution=wasm --wasm-execution=compiled --pallet pallet_benchmark_demo --extrinsic do_something --steps 50 --repeat 20
 ```
 
 ## Resources
